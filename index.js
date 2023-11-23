@@ -252,6 +252,8 @@ function parseId(id) {
   
 }
 
+publishToCentral("https://stremioaddon.sonsuzanime.com/manifest.json");
+
 const port = process.env.PORT || 3000;
 const address = process.env.ADDRESS || '0.0.0.0';
 

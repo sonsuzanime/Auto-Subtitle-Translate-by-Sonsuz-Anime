@@ -31,7 +31,6 @@ let data = {
     fj: 'Na Vosa Vakaviti',
     fo: 'Føroyskt',
     fr: 'Français',
-    'fr-CA': 'Français (Canada)',
     ga: 'Gaeilge',
     gl: 'Galego',
     gom: 'Konkani',
@@ -50,7 +49,6 @@ let data = {
     is: 'Íslenska',
     it: 'Italiano',
     iu: 'ᐃᓄᒃᑎᑐᑦ',
-    'iu-Latn': 'Inuktitut (Latin)',
     ja: '日本語',
     ka: 'ქართული',
     kk: 'Қазақ Тілі',
@@ -72,8 +70,6 @@ let data = {
     mi: 'Te Reo Māori',
     mk: 'Македонски',
     ml: 'മലയാളം',
-    'mn-Cyrl': 'Mongolian (Cyrillic)',
-    'mn-Mong': 'ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ',
     mr: 'मराठी',
     ms: 'Melayu',
     mt: 'Malti',
@@ -91,7 +87,6 @@ let data = {
     prs: 'دری',
     ps: 'پښتو',
     pt: 'Português (Brasil)',
-    'pt-PT': 'Português (Portugal)',
     ro: 'Română',
     ru: 'Русский',
     run: 'Rundi',
@@ -104,7 +99,6 @@ let data = {
     sn: 'chiShona',
     so: 'Soomaali',
     sq: 'Shqip',
-    'sr-Cyrl': 'Српски (ћирилица)',
     'sr-Latn': 'Srpski (latinica)',
     st: 'Sesotho',
     sv: 'Svenska',
@@ -114,8 +108,6 @@ let data = {
     th: 'ไทย',
     ti: 'ትግር',
     tk: 'Türkmen Dili',
-    'tlh-Latn': 'Klingon (Latin)',
-    'tlh-Piqd': 'Klingon (pIqaD)',
     tn: 'Setswana',
     to: 'Lea Fakatonga',
     tt: 'Татар',
@@ -129,8 +121,6 @@ let data = {
     yo: 'Èdè Yorùbá',
     yua: 'Yucatec Maya',
     yue: '粵語 (繁體)',
-    'zh-Hans': '中文 (简体)',
-    'zh-Hant': '繁體中文 (繁體)',
     zu: 'Isi-Zulu'
 }
 
@@ -321,6 +311,7 @@ let iso692 = {
     yo: "yor",
     za: "zha",
     zu: "zul",
+    "sr-Latn": "srp"
 };
 
 

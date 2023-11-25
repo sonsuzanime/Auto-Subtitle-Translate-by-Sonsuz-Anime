@@ -66,7 +66,7 @@ const getsubtitles = async (type, imdbid, season = null, episode = null,newisoco
           subtitles = [response.data.subtitles[0].url]
           
         }
-        return subtitles;
+        return subtitles.slice(0, 3);
         
       }  
     }

@@ -54,7 +54,7 @@ builder.defineSubtitlesHandler(async function(args){
   const {type, season=null, episode=null} = parseId(id);
   const apikeyremaining = await apikey.checkapikey(config.apikey)
   console.log("Api key:",config.apikey,"Api key remaining:",apikeyremaining,"oldisocode:",oldisocode,"iso692:",iso692);
-  if(apikeyremaining !== false)
+  if(apikey!== undefined && apikeyremaining !== false)
   {
     if (imdbid !== null){
       //if episode is not in translation queue

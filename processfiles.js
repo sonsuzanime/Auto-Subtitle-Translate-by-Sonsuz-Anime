@@ -47,7 +47,7 @@ async function savetranslatedsubs(count, imdbid, season = null, episode = null,o
     newSubtitleFilePath = `subtitles/${oldisocode}/${imdbid}/season${season}/${imdbid}-translated-${episode}-${count}.srt`;
     type = 'series';
   } else {
-    newSubtitleFilePath = `subtitles/${oldisocode}/${imdbid}/${imdbid}-translated-${count + 1}.srt`;
+    newSubtitleFilePath = `subtitles/${oldisocode}/${imdbid}/${imdbid}-translated-${count}.srt`;
     type = 'movie';
   }
   const output = [];

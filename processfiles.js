@@ -176,26 +176,16 @@ async function processsubtitles(filepath, imdbid, season = null, episode = null,
       }
       if (subtitleBatch.length !== 0) {
         subtitleBatch.push(texts[texts.length - 1]);
-        const totalCharacters = subtitleBatch.reduce((total, text) => total + text.length, 0);
         try {
           await translatebatch(subtitleBatch, apikey,oldisocode);
           subtitleBatch = [];
           let currentCount = 0;
           if(totalsubcount !== null && totalsubcount !== 0) {
-            if(index === 0){
-              currentCount = index + totalsubcount + 1;
-            }
-            else{
-              currentCount = index + totalsubcount;
-            }
+            currentCount = index + totalsubcount + 1;
           }
           else{
-            if(index === 0){
-              currentCount = index + 1;
-            }
-            else{
-              currentCount = index;
-            }
+            currentCount = index + 1;
+
           }
           if (currentCount !== 0) {
             await savetranslatedsubs(currentCount, imdbid, season, episode, oldisocode);

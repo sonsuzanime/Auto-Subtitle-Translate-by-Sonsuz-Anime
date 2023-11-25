@@ -127,6 +127,7 @@ async function checkremainingapi(subtitles, imdbid, season = null, episode = nul
 }
 
 async function processsubtitles(filepath, imdbid, season = null, episode = null,oldisocode,apikey) {
+  const totalsubcount = await connection.getSubCount(imdbid, season, episode,oldisocode);
   for (let index = 0; index < filepath.length; index++) {
     const originalSubtitleFilePath = filepath[index];
     try {
@@ -179,8 +180,23 @@ async function processsubtitles(filepath, imdbid, season = null, episode = null,
         try {
           await translatebatch(subtitleBatch, apikey,oldisocode);
           subtitleBatch = [];
-          const totalsubcount = await connection.getSubCount(imdbid, season, episode,oldisocode);
-          const currentCount = totalsubcount !== 0 && totalsubcount !== null ? index + 1 + totalsubcount : index + 1;
+          let currentCount = 0;
+          if(totalsubcount !== null && totalsubcount !== 0) {
+            if(index === 0){
+              currentCount = index + totalsubcount + 1;
+            }
+            else{
+              currentCount = index + totalsubcount;
+            }
+          }
+          else{
+            if(index === 0){
+              currentCount = index + 1;
+            }
+            else{
+              currentCount = index;
+            }
+          }
           if (currentCount !== 0) {
             await savetranslatedsubs(currentCount, imdbid, season, episode, oldisocode);
           }

@@ -175,24 +175,30 @@ async function processsubtitles(filepath, imdbid, season = null, episode = null,
         }
       }
       if (subtitleBatch.length !== 0) {
-        subtitleBatch.push(texts[texts.length - 1]);
         try {
+          subtitleBatch.push(texts[texts.length - 1]);
           await translatebatch(subtitleBatch, apikey,oldisocode);
           subtitleBatch = [];
-          let currentCount = 0;
-          if(totalsubcount !== null && totalsubcount !== 0) {
-            currentCount = index + totalsubcount + 1;
-          }
-          else{
-            currentCount = index + 1;
-
-          }
-          if (currentCount !== 0) {
-            await savetranslatedsubs(currentCount, imdbid, season, episode, oldisocode);
-          }
         } catch (error) {
-          console.error("Translate batch error: ",error);
+          console.log("Subtitle batch error: ",error);
         }
+      }
+      try {
+        let currentCount = 0;
+        if(totalsubcount !== null && totalsubcount !== 0) {
+          currentCount = index + totalsubcount + 1;
+        }
+        else{
+          currentCount = index + 1;
+
+        }
+        console.log("Current count: " + currentCount);
+        if (currentCount !== 0) {
+          await savetranslatedsubs(currentCount, imdbid, season, episode, oldisocode);
+          console.log("current count: " + currentCount);
+        }
+      } catch (error) {
+        console.error("Translate batch error: ",error);
       }
 
       subcounts = [];

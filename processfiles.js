@@ -155,6 +155,12 @@ async function processsubtitles(filepath, imdbid, season = null, episode = null,
               subtitleBatch = [];
             } catch (error) {
               console.error("Translate batch error: ",error);
+              subcounts = [];
+              timecodes = [];
+              texts = [];
+              translatedSubtitle = [];
+              subtitleBatch = [];
+              return false;
             }
           }
         } else if (iscount === true) {
@@ -181,6 +187,12 @@ async function processsubtitles(filepath, imdbid, season = null, episode = null,
           subtitleBatch = [];
         } catch (error) {
           console.log("Subtitle batch error: ",error);
+          subcounts = [];
+          timecodes = [];
+          texts = [];
+          translatedSubtitle = [];
+          subtitleBatch = [];
+          return false;
         }
       }
       try {

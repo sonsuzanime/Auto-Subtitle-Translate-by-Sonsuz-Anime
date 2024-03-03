@@ -13,6 +13,7 @@ let data = {
   brx: "बड़ो",
   bs: "Bosnian",
   ca: "Català",
+  "zh-Hant": "Chinese Traditional",
   cs: "Čeština",
   cy: "Cymraeg",
   da: "Dansk",

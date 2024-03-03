@@ -348,7 +348,10 @@ async function fetchSubtitles(
   langcode
 ) {
   const subtitles = [];
-  const oldisocode = languages.getoldisocode(langcode);
+  let oldisocode = languages.getoldisocode(langcode);
+  if (oldisocode === undefined) {
+    oldisocode = langcode;
+  }
   if (type === "movie") {
     for (let i = 1; i <= count; i++) {
       const subtitle = {

@@ -311,7 +311,9 @@ let iso692 = {
     yo: "yor",
     za: "zha",
     zu: "zul",
-    "sr-Latn": "srp"
+    "sr-Latn": "srp",
+    yua: "Yucatec Maya",
+  	yue: "xca"
 };
 
 

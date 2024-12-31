@@ -1,3 +1,11 @@
+THE PROJECT HAS BEEN DEPRECATED BECAUSE OF THE API THAT I WAS USING IS NOT WORKING ANYMORE. CHECK OUT MY NEW DEEPL AUTO SUBTITLE TRANSLATE ADDON! 
+
+https://github.com/osmansonsuz/Auto-Subtitle-Translate-by-SonsuzAnime-DeepL
+https://github.com/osmansonsuz/Auto-Subtitle-Translate-by-SonsuzAnime-DeepL
+https://github.com/osmansonsuz/Auto-Subtitle-Translate-by-SonsuzAnime-DeepL
+
+
+
 # Addon Link
 https://stremioaddon.sonsuzanime.com
 
